@@ -1,0 +1,23 @@
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>#</th>
+  </tr>
+  <ng-container *ngFor="let group of customerGroups">
+    <tr>
+      <td colspan="5">{{group.CustomerTypeId}} - {{group.CustomterTypeName}}</td>
+    </tr>
+    <tbody *ngFor="let c of group.Customers">
+      <tr>
+        <td>{{c.Id}}</td>
+        <td>{{c.Name}}</td>
+        <td>{{c.Email}}</td>
+        <td>{{c.Age}}</td>
+        <td><img src="{{c.Image}}" width="80"></td>
+      </tr>
+    </tbody>
+  </ng-container>
+</table>
